@@ -2,13 +2,53 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ScrollReveal from '../components/ScrollReveal'
 
+/* Premium thin-line SVG icons */
+const ICONS = {
+    eye: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12z" />
+            <circle cx="12" cy="12" r="3" />
+        </svg>
+    ),
+    lens: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <circle cx="12" cy="12" r="6" />
+            <circle cx="12" cy="12" r="2" />
+        </svg>
+    ),
+    bolt: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+        </svg>
+    ),
+    child: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="12" cy="8" r="5" />
+            <path d="M20 21a8 8 0 1 0-16 0" />
+        </svg>
+    ),
+    drop: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0L12 2.69z" />
+        </svg>
+    ),
+    clipboard: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+            <rect x="8" y="2" width="8" height="4" rx="1" />
+            <path d="M9 14l2 2 4-4" />
+        </svg>
+    ),
+}
+
 const VISIT_TYPES = [
-    { id: 'comprehensive', label: 'Comprehensive Eye Exam', icon: '👁️', desc: 'Full vision and eye health evaluation' },
-    { id: 'contact-lens', label: 'Contact Lens Fitting', icon: '🔍', desc: 'Fitting and prescription for contacts' },
-    { id: 'emergency', label: 'Emergency Visit', icon: '⚡', desc: 'Urgent eye care needs' },
-    { id: 'pediatric', label: 'Pediatric Eye Exam', icon: '🧒', desc: 'Eye exams for children' },
-    { id: 'dry-eye', label: 'Dry Eye Consultation', icon: '💧', desc: 'Dry eye evaluation and treatment' },
-    { id: 'follow-up', label: 'Follow-up Visit', icon: '📋', desc: 'Post-treatment checkup' },
+    { id: 'comprehensive', label: 'Comprehensive Eye Exam', icon: ICONS.eye, desc: 'Full vision and eye health evaluation' },
+    { id: 'contact-lens', label: 'Contact Lens Fitting', icon: ICONS.lens, desc: 'Fitting and prescription for contacts' },
+    { id: 'emergency', label: 'Emergency Visit', icon: ICONS.bolt, desc: 'Urgent eye care needs' },
+    { id: 'pediatric', label: 'Pediatric Eye Exam', icon: ICONS.child, desc: 'Eye exams for children' },
+    { id: 'dry-eye', label: 'Dry Eye Consultation', icon: ICONS.drop, desc: 'Dry eye evaluation and treatment' },
+    { id: 'follow-up', label: 'Follow-up Visit', icon: ICONS.clipboard, desc: 'Post-treatment checkup' },
 ]
 
 const TIME_SLOTS = [
@@ -149,7 +189,9 @@ export default function Booking() {
                                                 : 'border-border hover:border-teal/40'
                                             }`}
                                     >
-                                        <span className="text-2xl mb-2 block">{type.icon}</span>
+                                        <span className="w-10 h-10 rounded-full bg-teal/10 text-teal flex items-center justify-center mb-3">
+                                            <span className="w-5 h-5">{type.icon}</span>
+                                        </span>
                                         <span className="font-medium text-charcoal block mb-1">{type.label}</span>
                                         <span className="text-xs text-text-secondary">{type.desc}</span>
                                     </button>
