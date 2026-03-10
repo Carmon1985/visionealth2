@@ -27,7 +27,7 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/visionealth2">
       <ScrollToTop />
       <Navbar />
       <main>
