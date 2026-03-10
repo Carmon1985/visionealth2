@@ -1,16 +1,17 @@
 import ScrollReveal from '../components/ScrollReveal'
+import { img } from '../imageUrl'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 /* ═══ AI-generated premium images ═══ */
 const IMAGES = {
-    hero: '/images/interior.jpg',
-    clinic: '/images/clinic_interior.png',
-    doctor: '/images/doctor_edith.png',
-    eyeExam: '/images/eye_examination.png',
-    diagnostics: '/images/diagnostics_equipment.png',
-    treatment: '/images/treatment_optilight.png',
-    eyewear: '/images/premium_eyewear.png',
+    hero: img('images/interior.jpg'),
+    clinic: img('images/clinic_interior.png'),
+    doctor: img('images/doctor_edith.png'),
+    eyeExam: img('images/eye_examination.png'),
+    diagnostics: img('images/diagnostics_equipment.png'),
+    treatment: img('images/treatment_optilight.png'),
+    eyewear: img('images/premium_eyewear.png'),
 }
 
 /* ═══════════════════════════════════════

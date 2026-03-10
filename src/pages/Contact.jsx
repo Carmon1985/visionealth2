@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ScrollReveal from '../components/ScrollReveal'
+import { img } from '../imageUrl'
 
 const HOURS = [
     { day: 'Monday', time: '8:00am – 6:00pm' },
@@ -27,7 +28,7 @@ export default function Contact() {
             <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden">
                 <div
                     className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: 'url(/images/clinic_interior.png)' }}
+                    style={{ backgroundImage: `url(${img('images/clinic_interior.png')})` }}
                 />
                 <div className="absolute inset-0 bg-black/50" />
                 <div className="relative z-10 text-center px-6">

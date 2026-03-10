@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import ScrollReveal from '../components/ScrollReveal'
+import { img } from '../imageUrl'
 
 export default function OptiLight() {
     return (
@@ -8,7 +9,7 @@ export default function OptiLight() {
             <section className="relative h-[50vh] min-h-[350px] flex items-center justify-center overflow-hidden">
                 <div
                     className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: 'url(/images/treatment_optilight.png)' }}
+                    style={{ backgroundImage: `url(${img('images/treatment_optilight.png')})` }}
                 />
                 <div className="absolute inset-0 bg-black/50" />
                 <div className="relative z-10 text-center px-6">
@@ -49,7 +50,7 @@ export default function OptiLight() {
                         <ScrollReveal delay={200}>
                             <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-md">
                                 <img
-                                    src="/images/treatment_optilight.png"
+                                    src={img('images/treatment_optilight.png')}
                                     alt="Dry eye treatment"
                                     className="w-full h-full object-cover"
                                     loading="lazy"
@@ -109,7 +110,7 @@ export default function OptiLight() {
                         <ScrollReveal delay={200}>
                             <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-md">
                                 <img
-                                    src="/images/treatment_optilight.png"
+                                    src={img('images/treatment_optilight.png')}
                                     alt="OptiLight treatment device"
                                     className="w-full h-full object-cover"
                                     loading="lazy"

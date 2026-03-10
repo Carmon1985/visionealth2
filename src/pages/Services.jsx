@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ScrollReveal from '../components/ScrollReveal'
+import { img } from '../imageUrl'
 
 const IMAGES = {
-    hero: '/images/hero_main.png',
-    eyeExam: '/images/eye_examination.png',
-    diagnostics: '/images/diagnostics_equipment.png',
-    treatment: '/images/treatment_optilight.png',
-    eyewear: '/images/premium_eyewear.png',
+    hero: img('images/hero_main.png'),
+    eyeExam: img('images/eye_examination.png'),
+    diagnostics: img('images/diagnostics_equipment.png'),
+    treatment: img('images/treatment_optilight.png'),
+    eyewear: img('images/premium_eyewear.png'),
 }
 
 const CATEGORIES = [

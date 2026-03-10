@@ -1,26 +1,27 @@
 import { Link } from 'react-router-dom'
 import ScrollReveal from '../components/ScrollReveal'
+import { img } from '../imageUrl'
 
 const DOCTORS = [
     {
         name: 'Edith Weppelmann, O.D.',
         slug: 'edith-weppelmann',
         role: 'Lead Optometrist',
-        image: '/images/doctor_edith.png',
+        image: img('images/doctor_edith.png'),
         brief: 'Board-certified optometrist specializing in dry eye therapy, glaucoma management, and pre/post-operative care.',
     },
     {
         name: 'Thomas Weppelmann, MD, PhD',
         slug: 'thomas-weppelmann',
         role: 'Ophthalmologist',
-        image: '/images/doctor_thomas.png',
+        image: img('images/doctor_thomas.png'),
         brief: 'Board-certified ophthalmologist and cornea specialist with 60+ peer-reviewed publications.',
     },
     {
         name: 'Thao Ho, O.D.',
         slug: 'thao-ho',
         role: 'Optometric Physician',
-        image: '/images/doctor_thao.png',
+        image: img('images/doctor_thao.png'),
         brief: 'Residency-trained, board-certified optometric physician with 15+ years of experience.',
     },
 ]
@@ -32,7 +33,7 @@ export default function About() {
             <section className="relative h-[50vh] min-h-[350px] flex items-center justify-center overflow-hidden">
                 <div
                     className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: 'url(/images/clinic_interior.png)' }}
+                    style={{ backgroundImage: `url(${img('images/clinic_interior.png')})` }}
                 />
                 <div className="absolute inset-0 bg-black/50" />
                 <div className="relative z-10 text-center px-6">
@@ -132,7 +133,7 @@ export default function About() {
                         <ScrollReveal className="lg:col-span-5">
                             <div className="aspect-[4/5] rounded-lg overflow-hidden">
                                 <img
-                                    src="/images/clinic_interior.png"
+                                    src={img('images/clinic_interior.png')}
                                     alt="Vision Health Institute history"
                                     className="w-full h-full object-cover"
                                     loading="lazy"

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import ScrollReveal from '../components/ScrollReveal'
+import { img } from '../imageUrl'
 
 const CONDITIONS = [
     { name: 'Cataracts', desc: 'A clouding of the eye\'s natural lens that affects vision. Cataracts are very common in older people. By age 80, more than half of all Americans either have a cataract or have had cataract surgery.', category: 'Disease' },
@@ -26,7 +27,7 @@ export default function EyeConditions() {
             <section className="relative h-[50vh] min-h-[350px] flex items-center justify-center overflow-hidden">
                 <div
                     className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: 'url(/images/eye_examination.png)' }}
+                    style={{ backgroundImage: `url(${img('images/eye_examination.png')})` }}
                 />
                 <div className="absolute inset-0 bg-black/50" />
                 <div className="relative z-10 text-center px-6">

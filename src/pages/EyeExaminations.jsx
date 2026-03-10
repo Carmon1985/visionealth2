@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import ScrollReveal from '../components/ScrollReveal'
+import { img } from '../imageUrl'
 
 const PRELIMINARY_TESTS = [
     { name: 'Color Vision', desc: 'The Ishihara Color Testing plates are used to determine the presence of red-green color deficiencies.' },
@@ -32,7 +33,7 @@ export default function EyeExaminations() {
             <section className="relative h-[50vh] min-h-[350px] flex items-center justify-center overflow-hidden">
                 <div
                     className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: 'url(/images/eye_examination.png)' }}
+                    style={{ backgroundImage: `url(${img('images/eye_examination.png')})` }}
                 />
                 <div className="absolute inset-0 bg-black/50" />
                 <div className="relative z-10 text-center px-6">

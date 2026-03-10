@@ -1,11 +1,12 @@
 import { useParams, Link } from 'react-router-dom'
 import ScrollReveal from '../components/ScrollReveal'
+import { img } from '../imageUrl'
 
 const DOCTORS = {
     'edith-weppelmann': {
         name: 'Edith Weppelmann, O.D.',
         role: 'Lead Optometrist',
-        image: '/images/doctor_edith.png',
+        image: img('images/doctor_edith.png'),
         specialties: ['Dry Eye Therapy', 'Glaucoma Management', 'Pre/Post-Op Care', 'Ocular Emergencies', 'Injectables'],
         education: [
             'Bachelor of Science, cum laude — University of Florida',
@@ -23,7 +24,7 @@ const DOCTORS = {
     'thomas-weppelmann': {
         name: 'Thomas Alexander Weppelmann, MD, PhD',
         role: 'Ophthalmologist',
-        image: '/images/doctor_thomas.png',
+        image: img('images/doctor_thomas.png'),
         specialties: ['Ophthalmology', 'Cornea', 'Clinical Research', 'Surgical Eye Care'],
         education: [
             'PhD in Public Health — University of Florida',
@@ -43,7 +44,7 @@ const DOCTORS = {
     'thao-ho': {
         name: 'Thao Ho, O.D.',
         role: 'Optometric Physician',
-        image: '/images/doctor_thao.png',
+        image: img('images/doctor_thao.png'),
         specialties: ['Ocular Disease', 'General Eye Care', 'Comprehensive Exams', 'Community Eye Health'],
         education: [
             'Bachelor of Science in Microbiology & Molecular Biology — University of Central Florida',

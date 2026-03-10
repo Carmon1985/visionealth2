@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ScrollReveal from '../components/ScrollReveal'
+import { img } from '../imageUrl'
 
 const ARTICLES = [
     {
         slug: 'connections-between-eyes-and-headaches',
         title: 'Connections Between Eyes and Headaches',
         date: 'March 10, 2026',
-        image: '/images/blog_headaches.png',
+        image: img('images/blog_headaches.png'),
         excerpt: 'Headaches and eye health are more closely connected than most people realize. Understanding the link between your vision and headaches can help you find relief.',
         content: [
             'Headaches are one of the most common health complaints, but did you know that your eyes could be the culprit? Vision-related headaches are more common than many people realize, and understanding the connection between your eyes and your headaches could be the key to finding lasting relief.',
@@ -20,7 +21,7 @@ const ARTICLES = [
         slug: 'lens-care-tips-for-glasses-and-contacts',
         title: 'Lens Care Tips for Glasses and Contacts',
         date: 'February 26, 2026',
-        image: '/images/blog_lenscare.png',
+        image: img('images/blog_lenscare.png'),
         excerpt: 'Proper lens care is essential for maintaining clear vision and eye health. Here are expert tips for caring for both glasses and contact lenses.',
         content: [
             'Whether you wear glasses, contacts, or both, proper lens care is essential for maintaining clear vision and protecting your eye health. Poorly maintained lenses can lead to reduced visual clarity, eye infections, and even permanent damage. Here are our top tips for keeping your lenses in top condition.',
@@ -35,7 +36,7 @@ const ARTICLES = [
         slug: 'color-blindness-not-just-black-and-white',
         title: 'Color Blindness: Not Just Black and White',
         date: 'February 12, 2026',
-        image: '/images/blog_colorblind.png',
+        image: img('images/blog_colorblind.png'),
         excerpt: 'Color blindness affects millions but is widely misunderstood. Learn what it really means, who\'s affected, and how it\'s diagnosed.',
         content: [
             'Color blindness — or more accurately, color vision deficiency — affects approximately 1 in 12 men and 1 in 200 women worldwide. Despite its name, color blindness rarely means seeing the world entirely in black and white. Most people with color vision deficiency simply perceive certain colors differently.',
@@ -50,7 +51,7 @@ const ARTICLES = [
         slug: 'the-trick-to-optical-illusions',
         title: 'The Trick to Optical Illusions',
         date: 'January 28, 2026',
-        image: '/images/blog_illusions.png',
+        image: img('images/blog_illusions.png'),
         excerpt: 'Why do optical illusions trick our brains? Discover the fascinating science behind how our eyes and brain process visual information.',
         content: [
             'Optical illusions have fascinated humans for centuries. From ancient Greek architecture designed to appear perfectly straight to modern social media debates about the color of a dress, optical illusions reveal something fundamental about how our visual system works — and its surprising limitations.',
@@ -70,7 +71,7 @@ export default function Blog() {
             <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden">
                 <div
                     className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: 'url(/images/hero_main.png)' }}
+                    style={{ backgroundImage: `url(${img('images/hero_main.png')})` }}
                 />
                 <div className="absolute inset-0 bg-black/50" />
                 <div className="relative z-10 text-center px-6">

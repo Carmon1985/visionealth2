@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import ScrollReveal from '../components/ScrollReveal'
+import { img } from '../imageUrl'
 
 export default function Patients() {
     return (
@@ -8,7 +9,7 @@ export default function Patients() {
             <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden">
                 <div
                     className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: 'url(/images/clinic_interior.png)' }}
+                    style={{ backgroundImage: `url(${img('images/clinic_interior.png')})` }}
                 />
                 <div className="absolute inset-0 bg-black/50" />
                 <div className="relative z-10 text-center px-6">
@@ -59,7 +60,7 @@ export default function Patients() {
                         <ScrollReveal delay={200}>
                             <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-md">
                                 <img
-                                    src="/images/clinic_interior.png"
+                                    src={img('images/clinic_interior.png')}
                                     alt="Patient filling out forms"
                                     className="w-full h-full object-cover"
                                     loading="lazy"

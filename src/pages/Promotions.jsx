@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import ScrollReveal from '../components/ScrollReveal'
+import { img } from '../imageUrl'
 
 const PROMOTIONS = [
     {
@@ -47,7 +48,7 @@ export default function Promotions() {
             <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden">
                 <div
                     className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: 'url(/images/premium_eyewear.png)' }}
+                    style={{ backgroundImage: `url(${img('images/premium_eyewear.png')})` }}
                 />
                 <div className="absolute inset-0 bg-black/50" />
                 <div className="relative z-10 text-center px-6">

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import ScrollReveal from '../components/ScrollReveal'
+import { img } from '../imageUrl'
 
 const DIAGNOSTICS = [
     {
@@ -49,7 +50,7 @@ export default function AdvancedDiagnostics() {
             <section className="relative h-[50vh] min-h-[350px] flex items-center justify-center overflow-hidden">
                 <div
                     className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: 'url(/images/diagnostics_equipment.png)' }}
+                    style={{ backgroundImage: `url(${img('images/diagnostics_equipment.png')})` }}
                 />
                 <div className="absolute inset-0 bg-black/50" />
                 <div className="relative z-10 text-center px-6">
