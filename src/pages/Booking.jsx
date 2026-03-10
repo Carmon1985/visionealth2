@@ -5,36 +5,36 @@ import ScrollReveal from '../components/ScrollReveal'
 /* Premium thin-line SVG icons */
 const ICONS = {
     eye: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12z" />
             <circle cx="12" cy="12" r="3" />
         </svg>
     ),
     lens: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="12" cy="12" r="10" />
             <circle cx="12" cy="12" r="6" />
             <circle cx="12" cy="12" r="2" />
         </svg>
     ),
     bolt: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
         </svg>
     ),
     child: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="12" cy="8" r="5" />
             <path d="M20 21a8 8 0 1 0-16 0" />
         </svg>
     ),
     drop: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0L12 2.69z" />
         </svg>
     ),
     clipboard: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
             <rect x="8" y="2" width="8" height="4" rx="1" />
             <path d="M9 14l2 2 4-4" />
@@ -184,16 +184,18 @@ export default function Booking() {
                                     <button
                                         key={type.id}
                                         onClick={() => setVisitType(type.id)}
-                                        className={`p-5 rounded-lg border-2 text-left transition-all duration-300 cursor-pointer bg-transparent ${visitType === type.id
-                                                ? 'border-teal bg-teal-50 shadow-sm'
-                                                : 'border-border hover:border-teal/40'
+                                        className={`group flex items-center gap-4 p-5 rounded-lg border-l-4 border-y border-r transition-all duration-300 cursor-pointer bg-transparent ${visitType === type.id
+                                                ? 'border-l-teal border-y-teal/20 border-r-teal/20 bg-teal/5 shadow-md'
+                                                : 'border-l-transparent border-y-border border-r-border hover:border-l-teal/50 hover:shadow-sm'
                                             }`}
                                     >
-                                        <span className="w-10 h-10 rounded-full bg-teal/10 text-teal flex items-center justify-center mb-3">
-                                            <span className="w-5 h-5">{type.icon}</span>
+                                        <span className={`shrink-0 w-11 h-11 rounded-full flex items-center justify-center p-2.5 transition-colors duration-300 ${visitType === type.id ? 'bg-teal text-white' : 'bg-cream text-teal group-hover:bg-teal/10'}`}>
+                                            {type.icon}
                                         </span>
-                                        <span className="font-medium text-charcoal block mb-1">{type.label}</span>
-                                        <span className="text-xs text-text-secondary">{type.desc}</span>
+                                        <span className="text-left">
+                                            <span className="font-medium text-charcoal block mb-0.5 text-sm">{type.label}</span>
+                                            <span className="text-xs text-text-secondary leading-tight">{type.desc}</span>
+                                        </span>
                                     </button>
                                 ))}
                             </div>
